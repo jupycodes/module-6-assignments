@@ -1,0 +1,13 @@
+<ion-card>
+  <ion-item>
+    <ion-label>{{ goal.goalName }}</ion-label>
+    <ion-button fill="clear" slot="end" (click)="toggleContent()">View</ion-button>
+  </ion-item>
+
+  <ion-card-content *ngIf="isShown">
+    Status: {{ goal.status }} <br>
+    Description: {{goal.goalDescription}} <br>
+    Starts at: {{goal.goalStart}} <br>
+    Ends at: {{goal.goalEnd}} <br>
+  </ion-card-content>
+</ion-card>

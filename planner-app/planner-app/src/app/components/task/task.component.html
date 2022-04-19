@@ -1,0 +1,18 @@
+
+<ion-card>
+  <ion-item>
+    <ion-label>{{ task.taskName }}</ion-label>
+    <ion-button fill="clear" slot="end" (click)="toggleContent()">View</ion-button>
+    <ion-button fill="clear" slot="end" (click)="completeTask(task.task_id)">Complete</ion-button>
+  </ion-item>
+
+  <ion-card-content *ngIf="isShown">
+    Title: {{task.taskName}} <br>
+    Status: {{ task.status }} <br>
+    Description: {{task.description}} <br>
+    Starts at: {{task.taskStart}} <br>
+    Ends at: {{task.taskEnd}} <br>
+  </ion-card-content>
+</ion-card>
+
+

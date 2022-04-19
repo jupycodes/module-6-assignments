@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addNote">
+    <ion-item>
+      <ion-label position="fixed">Note Name</ion-label>
+      <ion-input formControlName="noteName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Header</ion-label>
+      <ion-input formControlName="noteHeader"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Details</ion-label>
+      <ion-textarea formControlName="noteDetails"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Importance</ion-label>
+      <ion-select formControlName="noteImportance">
+        <ion-select-option value="low">Low</ion-select-option>
+        <ion-select-option value="medium">Medium</ion-select-option>
+        <ion-select-option value="high">High</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" (click)="add_note()" [disabled]="addNote.invalid">Done</ion-button>
+  </form>
+  <ion-button expand="full" class="back_button" (click)="return()">Back</ion-button>
+</ion-content>

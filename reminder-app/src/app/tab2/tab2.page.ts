@@ -10,9 +10,9 @@ export class Tab2Page {
 
   constructor(private alertCtrl: AlertController) {}
 
-  async reminderAlert() {
+  async reminderAlert(date) {
     let alert = await this.alertCtrl.create({
-      header: 'Reminder',
+      header: date,
       message: 'Description of reminder',
       buttons: ['Ok']
     })

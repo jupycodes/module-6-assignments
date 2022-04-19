@@ -1,0 +1,24 @@
+import HttpClientModule into app.module.ts
+
+1. create a task interface
+list all important datatypes
+
+2. create task component
+.ts file has an @input of type Itask
+.html file is a card with {{task.data_name}}
+
+3. create task service
+import httpClient into constructor
+import Itask
+create a get and a post function
+
+4. add-task page
+create form in .html
+import ReactiveFormsModule into add-task.module.ts
+add-task.page.ts has a function add_task() which is where you need to call the createTask() function from the taskService
+
+5. in tab1 page to show the tasks:
+import task component into tab1 routing module, add to declarations and to exports
+in tab1.page.ts import task service, oninit into constructor along with a subscribe function
+in .html file, add a div to show all  tasks using *ngFor  
+

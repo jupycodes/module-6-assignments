@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   <ion-button expand="full" (click)="showAchievements()">Achievements</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-segment [(ngModel)]="display">
+    <ion-segment-button value="images" (click)="showImages()">
+      <ion-label>Images</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="videos" (click)="showVideos()">
+      <ion-label>Videos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="display">
+    <ion-list *ngSwitchCase="'images'">
+      <app-image-diary></app-image-diary>
+    </ion-list>
+    <ion-list *ngSwitchCase="'videos'">
+      <app-video-diary></app-video-diary>
+    </ion-list>
+  </div>
+
+
+</ion-content>

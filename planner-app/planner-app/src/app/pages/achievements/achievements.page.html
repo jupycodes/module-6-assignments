@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-button size="small" class="back_button"  (click)="return()">Back</ion-button>
+  <ion-item>Tasks</ion-item>
+  <div *ngFor="let task of tasks">
+    <app-complete-tasks [task]="task"></app-complete-tasks>
+  </div>
+  <ion-item>Goals</ion-item>
+  <div *ngFor="let goal of goals">
+    <app-complete-goals [goal]="goal"></app-complete-goals>
+  </div>
+</ion-content>
+

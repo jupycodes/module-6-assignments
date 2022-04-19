@@ -1,0 +1,16 @@
+<ion-card>
+  <ion-item>
+    <ion-label>{{ note.noteName }}</ion-label>
+    <ion-button fill="clear" slot="end" (click)="toggleContent()">View</ion-button>
+    <ion-button fill="clear" slot="end" (click)="deleteNote(note.note_id)">Delete</ion-button>
+  </ion-item>
+
+  <ion-card-content *ngIf="isShown">
+      Title: {{ note.noteName }} <br>
+      Importance: {{note.noteImportance}} <br>
+      Header: {{note.noteHeader}} <br>
+      Details: {{note.noteDetails}} <br>
+  </ion-card-content>
+</ion-card>
+
+
